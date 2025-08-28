@@ -7,5 +7,3 @@ This is a number guessing game with 3 different difficulties: Easy, Medium and H
 The difficulty only impacts the amount of guesses you have.
 
 You can also play multiple rounds and it tracks your high-score (in seconds).
-
-[Uploading Test_03.py…]()
