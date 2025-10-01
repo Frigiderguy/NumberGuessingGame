@@ -41,7 +41,7 @@ def hints(num):
     print("\nDo you want a hint?")
     hint_answer = input("Yes or No: ")
     while True:
-        if hint_answer == "Yes":
+        if hint_answer.lower() == "yes":
             fake_num /= 10
             if int(fake_num) == 0:
                 print("This is a single-digit number")
@@ -49,10 +49,10 @@ def hints(num):
             else:
                 print(f"This number starts with {int(fake_num)}.")
                 break
-        elif hint_answer == "No":
+        elif hint_answer.lower() == "no":
             print("Oh well...")
             break
-        elif hint_answer != "Yes" and "No":
+        elif hint_answer.lower() != "yes" and "no":
             print("Only 'Yes' or 'No'")
             hint_answer = input("Yes or No: ")
 
@@ -146,23 +146,24 @@ while counter_game >= 1:
             print(f"Your record for Hard difficulty is: {file_hard}")
         print("\nDo you want to play again?")
         answer_repeat = input("Yes or No: ")
-        if answer_repeat == "Yes":
+        if answer_repeat.lower() == "yes":
             print("\nGreat!\n")
             counter_game += 1
             counter_try = 0
             answer_game = 0
             is_record = False
             game()
-        elif answer_repeat == "No":
+        elif answer_repeat.lower() == "no":
             print("Oh well!")
             if counter_game == 1:
                 print(f"You have played {counter_game} round.")
             else:
                 print(f"You have played {counter_game} rounds.")
             break
-        elif answer_repeat != "Yes" and "No":
+        elif answer_repeat.lower() != "yes" and "no":
             print("Only 'Yes' or 'No'")
             Idontwantto = True
     else:
         counter_game = 0
         break
+
